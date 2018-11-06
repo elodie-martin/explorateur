@@ -8,7 +8,7 @@ if (isset($_GET['p'])) {
 }
 
 // Rendu du template
-$loader = new Twig_Loader_Filesystem(__DIR__ . '/explorateur');
+$loader = new Twig_Loader_Filesystem('twig');
 $twig = new Twig_Environment($loader, [
     'cache' => false, // __DID__ . '/tmp'
 

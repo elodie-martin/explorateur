@@ -1,5 +1,5 @@
 <?php
-require 'vendor/autoload.php';
+require_once 'vendor/autoload.php';
 
 // Routing
 $page = 'index';
@@ -8,7 +8,7 @@ if (isset($_GET['p'])) {
 }
 
 // Rendu du templqte
-$loader = new Twig_Loader_Filesystem(__DIR__ . '/templates');
+$loader = new Twig_Loader_Filesystem(__DIR__ . '/explorateur');
 $twig = new Twig_Environment($loader, [
     'cache' => false, // __DID__ . '/tmp'
 

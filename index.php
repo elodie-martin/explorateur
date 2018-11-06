@@ -7,7 +7,7 @@ if (isset($_GET['p'])) {
     $page = $_GET['p'];
 }
 
-// Rendu du templqte
+// Rendu du template
 $loader = new Twig_Loader_Filesystem(__DIR__ . '/explorateur');
 $twig = new Twig_Environment($loader, [
     'cache' => false, // __DID__ . '/tmp'

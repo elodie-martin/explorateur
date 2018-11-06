@@ -1,5 +1,5 @@
 <?php
-require_once 'vendor/autoload.php';
+require 'vendor/autoload.php';
 
 // Routing
 $page = 'index';
@@ -16,13 +16,18 @@ $twig = new Twig_Environment($loader, [
 
 switch ($page) {
     case 'secondary':
-        echo $twig->render('secondary.twig');
+        echo $twig->render('twig/secondary.twig');
         break;
     case 'index':
-        echo $twig->render('index.html.twig');
+        echo $twig->render('twig/index.html.twig');
+        break;
+    case 'affichageFichiers':
+        echo $twig->render('twig/affichageFichiers.twig');
         break;
     default:
         header('HTTP/1.0 404 not found');
-        echo $twig->render('404.twig');
+        echo $twig->render('twig/404.twig');
         break;
 }
+
+?>

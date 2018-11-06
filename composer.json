@@ -1,14 +1,5 @@
 {
-    "name": "vendor/name",
-    "vendor-dir": "composer_vendor",
-    "authors": [
-        {
-            "name": "Elodie Martin",
-            "email": "elodie.m@codeur.online"
-        }
-    ],
     "require": {
-        "erusev/parsedown": "~1.0",
-        "twig/twig": "1.*"
+        "twig/twig": "^2.0"
     }
 }

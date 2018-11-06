@@ -8,7 +8,7 @@ if (isset($_GET['p'])) {
 }
 
 // Rendu du template
-$loader = new Twig_Loader_Filesystem(__DIR__ . '/explorateur');
+$loader = new Twig_Loader_Filesystem('twig');
 $twig = new Twig_Environment($loader, [
     'cache' => false, // __DID__ . '/tmp'
 
@@ -16,13 +16,13 @@ $twig = new Twig_Environment($loader, [
 
 switch ($page) {
     case 'secondary':
-        echo $twig->render('twig/secondary.twig');
+        echo $twig->render('secondary.twig');
         break;
     case 'index':
-        echo $twig->render('twig/index.html.twig');
+        echo $twig->render('index.html.twig');
         break;
     case 'affichageFichiers':
-        echo $twig->render('twig/affichageFichiers.twig');
+        echo $twig->render('affichageFichiers.twig');
         break;
     default:
         header('HTTP/1.0 404 not found');

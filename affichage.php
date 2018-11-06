@@ -1,3 +1,5 @@
+
+
 <?php
 
 /* racine */
@@ -11,14 +13,14 @@ function addScheme($entry,$base,$type) {
   $tab['size'] = filesize($base."/home/stagiaire/projets/explorateur".$entry);
   $tab['perms'] = fileperms($base."/home/stagiaire/projets/explorateur".$entry);
   $tab['access'] = fileatime($base."/home/stagiaire/projets/explorateur".$entry);
-  $t = explode(".", $entry);
+  $t = explode("/home/stagiaire/projets/explorateur", $entry);
   $tab['ext'] = $t[count($t)-1];
   return $tab;
 }
 
 /* liste des dossiers */
 function list_dir($base, $cur, $level=0) {
-  global $PHP_SELF, $BASE, $order, $asc;
+  global $PHP_SELF, $base, $order, $asc;
   if ($dir = opendir($base)) {
     $tab = array();
     while($entry = readdir($dir)) {
@@ -43,7 +45,7 @@ function list_dir($base, $cur, $level=0) {
         echo "<img src=\"dir-close.gif\" />&nbsp;<a href=\"$PHP_SELF?dir=". rawurlencode($file) ."&order=$order&asc=$asc\">$entry</a><br />\n";
       }
       /* l'entrée est-elle dans la branche dont le dossier courant est la feuille */
-      if(ereg($file."/",$cur."/")) {
+      if(ereg($file."/home/stagiaire/projets/explorateur",$cur."/home/stagiaire/projets/explorateur")) {
         list_dir($file, $cur, $level+1);
       }
     }
@@ -60,7 +62,7 @@ function list_file($cur) {
     $tab_file = array();
     /* extraction */
     while($file = readdir($dir)) {
-      if(is_dir($cur."/".$file)) {
+      if(is_dir($cur."/home/stagiaire/projets/explorateur".$file)) {
         if(!in_array($file, array(".",".."))) {
           $tab_dir[] = addScheme($file, $cur, 'dir');
         }
@@ -234,7 +236,7 @@ function cmp_ext($a,$b) {
 }
 ?>
 
-<table border="1" cellspacing="0" cellpadding="10" bordercolor="gray">
+<table border ="1" cellspacing="0" cellpadding="10" bordercolor="gray">
 <tr valign="top"><td>
 
 <!-- liste des répertoires
@@ -267,3 +269,4 @@ if(!$dir) {
 } 
 list_file(rawurldecode($dir)); 
 ?>
+

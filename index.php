@@ -19,11 +19,13 @@ switch ($page) {
         echo $twig->render('secondary.twig');
         break;
     case 'index':
-        echo $twig->render('index.html.twig');
+        echo $twig->render('layout.twig');
         break;
     case 'affichageFichiers':
         echo $twig->render('affichageFichiers.twig');
         break;
+    case 'affichageExtension' :
+        echo $twig->render('affichageExtension.twig'); 
     default:
         header('HTTP/1.0 404 not found');
         echo $twig->render('twig/404.twig');

@@ -26,6 +26,7 @@ switch ($page) {
         $realpath = realpath($dir);
 
         $liste = array();
+
         while (( $file = readdir( $dh)) !== false ){
             if( is_dir( $file ) ){
                 $liste[] = array("fichier" => $file, "isDir" => true, "extension" => "");

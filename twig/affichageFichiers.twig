@@ -2,16 +2,15 @@
 
 {% block affichageFichiers %} 
 
-    <ul>
     {% for affichageFichier in liste %}
 
         {% if affichageFichier.isDir == true %}
-            <li><a href="{{affichageFichier.fichier}}" > <img src="media/{{affichageFichier.fichier}}.svg">{{affichageFichier.fichier}}</a></li>
+            <a href="{{affichageFichier.fichier}}" > <img src="media/{{affichageFichier.fichier}}folder.png">{{affichageFichier.fichier}}</a>
         {% else %}
 
-        <li><a href="{{affichageFichier.fichier}}" > <img src="media/{{affichageFichier.extension}}.svg"> {{affichageFichier.fichier}} - {{affichageFichier.extension}}</a></li>
+       <img src="media/{{affichageFichier.extension}}.svg"> {{affichageFichier.fichier}} - {{affichageFichier.extension}}
         {% endif %}
 
     {% endfor %}
-    </ul>
+    
 {% endblock %}

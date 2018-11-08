@@ -1,14 +1,41 @@
 {% extends 'layout.twig' %}
 
-{% block head %}
-Deuxième page
-{% endblock %}
 
 {% block title %}
-Explorateur de fichiers
+<title>Explorateur de fichiers</title>
+
+
+{% endblock %}
+
+{% block header %} 
+<h1>Explorateur de fichiers</h1>
+{% endblock %}
+
+{% block nav %}
+{{ realpath }}
+
+<button onclick="history.go(-1);">Back</button>
+<button onclick="history.go(1);">Forward</button>
+
+<ul>
+        {% for affichageFichier in liste %}
+    
+            {% if affichageFichier.isDir == true %}
+                <li><a href="{{affichageFichier.fichier}}"> <img src="media/{{affichageFichier.fichier}}folder.png"></a></li>
+            {% else %}
+    
+            <li><a href="{{affichageFichier.fichier}}"> <img src="media/{{affichageFichier.extension}}.svg"> {{affichageFichier.fichier}}</a></li>
+            {% endif %}
+    
+        {% endfor %}
+        </ul>
 {% endblock %}
 
 {% block content %}
+
+
+
+
 
 
 

@@ -1,3 +1,16 @@
-{% block affichageFichiers %}
+{% extends 'secondary.twig' %}
 
+{% block affichageFichiers %} 
+
+    {% for affichageFichier in liste %}
+
+        {% if affichageFichier.isDir == true %}
+            <a href="{{affichageFichier.fichier}}" > <img src="media/{{affichageFichier.fichier}}folder.png"></a>
+        {% else %}
+
+       <img src="media/{{affichageFichier.extension}}.svg"> {{affichageFichier.fichier}}
+        {% endif %}
+
+    {% endfor %}
+    
 {% endblock %}

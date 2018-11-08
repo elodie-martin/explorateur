@@ -1,0 +1,11 @@
+h1 {
+  display: flex;
+  justify-content: center; }
+
+img {
+  width: 100px; }
+
+.petit img {
+  width: 30px; }
+
+/*# sourceMappingURL=styles.css.map */

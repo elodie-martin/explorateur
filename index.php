@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/style.css" href="css/styles.css">
 <?php
 require 'vendor/autoload.php';
 
@@ -21,6 +21,10 @@ switch ($page) {
 
         $dir = './';
         $dh = opendir( $dir );
+        
+       
+        $realpath = realpath($dir);
+
         $liste = array();
         while (( $file = readdir( $dh)) !== false ){
             if( is_dir( $file ) ){
@@ -31,12 +35,13 @@ switch ($page) {
         }
 
         closedir( $dh );
-        echo $twig->render('affichageFichiers.twig', array ( 'dir' => $dir, 'liste' => $liste ));
+        
+        echo $twig->render('affichageFichiers.twig', array ( 'dir' => $dir, 'liste' => $liste, 'realpath' => $realpath  ));
+       
         break;
     default:
         header('HTTP/1.0 404 not found');
         echo $twig->render('404.twig');
         break;
 }
-
 ?>

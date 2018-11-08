@@ -1,6 +1,6 @@
 // Variable
-const nav = document.querySelectorAll ('nav');
-
-nav.addEventLister('click', ()=>{
-    console.log('coucou');
-}
+fetch('index.php',  { method : 'POST', body: data } )
+    .then ( (result)=> result.text() ) 
+    .then ( (result) => {
+        console.log(result);
+    });

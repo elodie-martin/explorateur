@@ -5,10 +5,10 @@
     {% for affichageFichier in liste %}
 
         {% if affichageFichier.isDir == true %}
-            <a href="{{affichageFichier.fichier}}" > <img src="media/{{affichageFichier.fichier}}folder.png">{{affichageFichier.fichier}}</a>
+            <a href="{{affichageFichier.fichier}}" > <img src="media/{{affichageFichier.fichier}}folder.png"></a>
         {% else %}
 
-       <img src="media/{{affichageFichier.extension}}.svg"> {{affichageFichier.fichier}} - {{affichageFichier.extension}}
+       <img src="media/{{affichageFichier.extension}}.svg"> {{affichageFichier.fichier}}
         {% endif %}
 
     {% endfor %}

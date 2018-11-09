@@ -37,7 +37,7 @@ switch ($page) {
 
         closedir( $dh );
         
-        echo $twig->render('affichageFichiers.twig', array ( 'dir' => $dir, 'liste' => $liste, 'realpath' => $realpath  ));
+        echo  $twig->render('affichageFichiers.twig', array ( 'dir' => $dir, 'liste' => $liste, 'realpath' => $realpath  )) ;
        
         break;
     default:

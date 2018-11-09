@@ -11,32 +11,36 @@
 <h1>Explorateur de fichiers</h1>
 {% endblock %}
 
-{% block nav %}
+{% block realpatch %}
+
 {{ realpath }}
 
-<button onclick="history.go(-1);">Back</button>
-<button onclick="history.go(1);">Forward</button>
+{% endblock %}
 
-<ul>
-        {% for affichageFichier in liste %}
-    
-            {% if affichageFichier.isDir == true %}
-                <li><a href="{{affichageFichier.fichier}}"> <img src="media/{{affichageFichier.fichier}}folder.png"></a></li>
-            {% else %}
-    
-            <li><a href="{{affichageFichier.fichier}}"> <img src="media/{{affichageFichier.extension}}.svg"> {{affichageFichier.fichier}}</a></li>
-            {% endif %}
-    
-        {% endfor %}
-        </ul>
+
+{% block bouton %}
+
+
+<button class="btnBack" onclick="history.go(-1);"><i class="fas fa-chevron-circle-right"></i></button>
+<button class="btnForward" onclick="history.go(1);"><i class="fas fa-chevron-circle-left"></i></button>
+
+{% endblock %}
+
+
+
+{% block nav %}
+    {% for affichageFichier in liste %}
+
+        {% if affichageFichier.isDir == true %}
+            <br><a  href="{{affichageFichier.fichier}}"> <img width="70px" height="70px"  src="media/{{affichageFichier.fichier}}folder.png" ></a>
+        {% else %}
+
+        <br><a href="{{affichageFichier.fichier}}"> <img width="70px" height="70px"  src="media/{{affichageFichier.extension}}.svg"> {{affichageFichier.fichier}}</a>
+        {% endif %}
+
+    {% endfor %}
 {% endblock %}
 
 {% block content %}
-
-
-
-
-
-
 
 {% endblock %}

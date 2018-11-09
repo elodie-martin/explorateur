@@ -1,17 +1,224 @@
 h1 {
-   display: flex;
-justify-content: center;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(27, 27, 26);
+    color: white;
+    margin: 0;
+    background-size: cover;
+    font-size:3.5rem;
+}
+
+.background {
+    background-image: url(../media/background.jpg);
+    background-size: cover;
+
+}
+
+.navigation {
+    background-color: rgb(27, 27, 26);
+    margin-left: 0rem;
+
+}
+
+.ml-5 {
+    margin-left: 14rem !important;
+}
+
+.mr-5 {
+    margin-right: 10rem !important;
 }
 
 img {
-    width: 50px;
+    width: 70px;
 }
 
+.content {
 
-    .petit { 
-        img {
-            width: 30px;
+
+    .petit {
+
+        .imgFichier {
+            width: 55px !important;
 
         }
+
+        .imgExtension {
+            width: 50px !important;
+
+        }
+    }
 }
 
+
+.realpatch {
+    position: relative;
+    left: 70%;
+    top: -60%;
+    font-size: 136%;
+    color: white;
+
+}
+
+
+
+.btnBack {
+    position: relative;
+    right: -9%;
+    background-color: rgb(27, 27, 26);
+
+    height: 100%;
+
+    width: 6%;
+
+    .fas {
+        color: white;
+        font-size: x-large;
+    }
+
+}
+
+.btnForward {
+    position: relative;
+    right: 5%;
+    background-color: rgb(27, 27, 26);
+    color: white;
+    height: 100%;
+
+    width: 6%;
+
+    .fas {
+        color: white;
+        font-size: x-large;
+
+    }
+}
+
+
+
+.couleurNav {
+    background-color: rgb(27, 27, 26);
+}
+
+.couleurAffichage {
+    background-color: #303030;
+}
+
+
+// MEDIA PORTRAIT MAX 575.98PX
+@media (max-width: 575.98px) and (orientation:portrait)  {
+    
+
+    h1 {
+        font-size: 2rem;
+    }
+    .navigation{
+        margin-left: 0rem;
+    }
+
+    .btnBack {
+        height: 84%;
+        right: -13%;
+        width: 10%;
+    }
+
+    .btnForward {
+        height: 84%;
+        right: 9%;
+        width: 10%;
+    }
+    .realpatch {
+       
+        left: 53%;
+        top: -60%;
+        font-size: 99%;
+        
+    }
+
+}
+
+
+
+// MEDIA PORTRAIT MIN 576PX AND MAX 767.68PX 
+@media (min-width: 576px) and (max-width: 767.98px) and (orientation:portrait) {
+     h1 {
+        font-size: 2rem;
+    }
+    .navigation {
+        margin-left: 0rem;
+    }
+
+    .btnForward {
+        right: 9%;
+        width: 10%;
+    }
+
+    .btnBack {
+        right: -15%;
+        width: 10%;
+    }
+
+    .realpatch {
+
+        left: 52%;
+        top: -53%;
+        font-size: 100%;
+
+    }
+
+    .couleurNav {
+        background-color: rgb(27, 27, 26);
+    }
+}
+
+// MEDIA LANDSCAPE MIN 576PX AND MAX 767.68PX 
+@media (min-width: 576px) and (max-width: 767.98px) and (orientation:landscape) {
+
+
+}
+
+
+
+// MEDIA PORTRAIT MIN 768PX AND MAX 991.98PX 
+@media (min-width: 768px) and (max-width: 991.98px) and (orientation:portrait) {
+    .navigation {
+        margin-left: 0rem;
+    }
+
+    .btnForward {
+        right: 6%;
+        width: 8%;
+    }
+
+    .btnBack {
+        right: -13%;
+        width: 8%;
+    }
+
+    .realpatch {
+        left: 60%;
+        top: -63%;
+        font-size: 115%;
+
+
+    }
+}
+
+
+// MEDIA PORTRAIT MIN 992PX AND MAX 1199.98PX 
+@media (min-width: 992px) and (max-width: 1199.98px) and (orientation:portrait) {
+    .navigation{
+        margin-left: 0rem;
+    }
+    
+    .realpatch {
+
+
+        left: 64%;
+        top: -63%;
+        font-size: 124%;
+
+
+    }
+
+
+}

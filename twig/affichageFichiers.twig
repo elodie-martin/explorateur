@@ -3,14 +3,22 @@
 {% block affichageFichiers %} 
 
     {% for affichageFichier in liste %}
-
+    
         {% if affichageFichier.isDir == true %}
-            <a href="{{affichageFichier.fichier}}" > <img src="media/{{affichageFichier.fichier}}folder.png"></a>
-        {% else %}
+        <div id="chemin">
+            <a class="dir" onclick = "dossier_click()" href="{{affichageFichier.fichier}}" > <img class="image" src="media/{{affichageFichier.fichier}}folder.png"></a>
+        </div>
+         {% else %}
+   
 
        <img src="media/{{affichageFichier.extension}}.svg"> {{affichageFichier.fichier}}
+
+      
         {% endif %}
 
     {% endfor %}
-    
+
+   
+      
 {% endblock %}
+

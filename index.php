@@ -4,10 +4,14 @@ require 'vendor/autoload.php';
 
 // Routing
 $page = 'index';
+$myArray = 'array';
+$myArray = ["path" => $path];
 
-if (isset($_GET['p'])) {
-    $page = $_GET['p'];
+if (isset($_GET['url'])) {
+    $path  = realpath($_GET['url']);
 }
+
+
 
 // Rendu du template
 $loader = new Twig_Loader_Filesystem('twig');
@@ -15,6 +19,9 @@ $twig = new Twig_Environment($loader, [
     'cache' => false, // __DID__ . '/tmp'
 
 ]);
+
+
+echo json_encode($myArray);
 
 switch ($page) {
     case 'index':
@@ -28,7 +35,9 @@ switch ($page) {
         $liste = array();
 
         while (( $file = readdir( $dh)) !== false ){
+           
             if( is_dir( $file ) ){
+            
                 $liste[] = array("fichier" => $file, "isDir" => true, "extension" => "");
             }else{
                 $liste[] = array("fichier" => $file, "isDir" => false, "extension" => pathinfo( $dir.$file,PATHINFO_EXTENSION));
@@ -37,7 +46,7 @@ switch ($page) {
 
         closedir( $dh );
         
-        echo $twig->render('affichageFichiers.twig', array ( 'dir' => $dir, 'liste' => $liste, 'realpath' => $realpath  ));
+        echo $twig->render('affichageFichiers.twig', array ( 'dir' => $dir, 'liste' => $liste, 'realpath' => $realpath,   ));
        
         break;
     default:
@@ -45,4 +54,6 @@ switch ($page) {
         echo $twig->render('404.twig');
         break;
 }
+
+
 ?>

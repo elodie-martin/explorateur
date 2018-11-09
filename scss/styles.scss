@@ -1,3 +1,4 @@
+
 h1 {
     display: flex;
     justify-content: center;
@@ -11,13 +12,13 @@ h1 {
 .background {
     background-image: url(../media/background.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
 
 }
 
 .navigation {
     background-color: rgb(27, 27, 26);
-    margin-left: 0rem;
-
+   
 }
 
 .ml-5 {
@@ -53,7 +54,7 @@ img {
 .realpatch {
     position: relative;
     left: 70%;
-    top: -60%;
+    top: -33%;
     font-size: 136%;
     color: white;
 
@@ -62,14 +63,12 @@ img {
 
 
 .btnBack {
-    position: relative;
-    right: -9%;
+   position: relative;
+   left:8%;
     background-color: rgb(27, 27, 26);
-
-    height: 100%;
-
-    width: 6%;
-
+    color: white;
+    height: 7%;
+    width: 5%;
     .fas {
         color: white;
         font-size: x-large;
@@ -78,13 +77,13 @@ img {
 }
 
 .btnForward {
+   
     position: relative;
-    right: 5%;
+    right: 3%;
     background-color: rgb(27, 27, 26);
     color: white;
-    height: 100%;
-
-    width: 6%;
+    height: 7%;
+    width: 5%;
 
     .fas {
         color: white;
@@ -97,6 +96,8 @@ img {
 
 .couleurNav {
     background-color: rgb(27, 27, 26);
+    opacity: 0.8;
+
 }
 
 .couleurAffichage {
@@ -111,9 +112,7 @@ img {
     h1 {
         font-size: 2rem;
     }
-    .navigation{
-        margin-left: 0rem;
-    }
+    
 
     .btnBack {
         height: 84%;
@@ -180,10 +179,6 @@ img {
 
 // MEDIA PORTRAIT MIN 768PX AND MAX 991.98PX 
 @media (min-width: 768px) and (max-width: 991.98px) and (orientation:portrait) {
-    .navigation {
-        margin-left: 0rem;
-    }
-
     .btnForward {
         right: 6%;
         width: 8%;
@@ -206,13 +201,7 @@ img {
 
 // MEDIA PORTRAIT MIN 992PX AND MAX 1199.98PX 
 @media (min-width: 992px) and (max-width: 1199.98px) and (orientation:portrait) {
-    .navigation{
-        margin-left: 0rem;
-    }
-    
     .realpatch {
-
-
         left: 64%;
         top: -63%;
         font-size: 124%;

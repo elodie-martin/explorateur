@@ -34,7 +34,6 @@ switch ($page) {
                 $liste[] = array("fichier" => $file, "isDir" => false, "extension" => pathinfo( $dir.$file,PATHINFO_EXTENSION));
             }
         }
-
         closedir( $dh );
         
         echo $twig->render('affichageFichiers.twig', array ( 'dir' => $dir, 'liste' => $liste, 'realpath' => $realpath  ));

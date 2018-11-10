@@ -2,52 +2,67 @@
 <html lang="fr">
 
 <head>
-        <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet"> 
-    <link rel="stylesheet" href="css/styles.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     {% block title %} {% endblock %}
- 
+
 </head>
 
-<body>
-        {% block header %} {% endblock %}
-        
-    <section class="container fluid">
+<body class="background">
+
+    <section class="container-fluid">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                        
+                <div class="navigation col-12 col-sm-12 col-md-12 col-lg-12">
+                    {# TITRE #}
+                    {% block header %} {% endblock %}
+                </div>
+            </div>
+            {# NAVIGATION #}
+            <div class="row">
+                <div class="navigation col-12 col-sm-12 col-md-12 col-lg-12">
+                    {% block bouton %} {% endblock %}
 
+                    <div class="realpatch ">
+                        {% block realpatch %}{% endblock %}
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="container fluid">
+    {# ARBRE #}
+    <section class="container-fluid">
         <div class="container">
             <div class="row">
-                <aside>
-                <div class=" petit col-4 col-sm-4 col-md-4 col-lg-4">
+                
+                    <div class="petit couleurNav  col-4 col-sm-4 col-md-4 col-lg-4">
+                       
                         {% block nav %} {% endblock %}
-                    </aside>
-                    <section>
-                    <div class="col-8 col-sm-8 col-md-8 col-lg-8"></div>
-                    
-                    
-{% block content %} 
-<p id="dossier"></p>
-<p id="content"></p>
+                    </div>
+                    <div class="petit couleurAffichage col-8 col-sm-8 col-md-8 col-lg-8">
+                            
+                            {% block affichageFichiers %} {% endblock %}
+                        </div>
+                
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid col-12 col-sm-12 col-md-12 col-lg-12" ">
+        <div class="container">
+            <div class="row">
+                <div class="petit >
+                        
+                        
 
+                    
+                  
 
-{% endblock %}
-<div>
-{% block affichageFichiers %} {% endblock %}
-</div>
-</section>
                 </div>
             </div>
         </div>

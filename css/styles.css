@@ -1,11 +1,195 @@
 h1 {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  background-color: #1b1b1a;
+  color: white;
+  margin: 0;
+  background-size: cover;
+  font-size: 3.5rem; }
+
+.background {
+  background-image: url(../media/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%; }
+
+.navigation {
+  background-color: #1b1b1a; }
 
 img {
-  width: 100px; }
+  width: 70px; }
 
-.petit img {
-  width: 30px; }
+.content .petit .imgFichier {
+  width: 55px !important; }
+.content .petit .imgExtension {
+  width: 50px !important; }
+
+.realpatch {
+  position: relative;
+  left: 70%;
+  top: -33%;
+  font-size: 136%;
+  color: white; }
+
+.btnBack {
+  position: relative;
+  left: 8%;
+  background-color: #1b1b1a;
+  color: white;
+  height: 7%;
+  width: 5%; }
+  .btnBack .fas {
+    color: white;
+    font-size: x-large; }
+
+.btnForward {
+  position: relative;
+  right: 3%;
+  background-color: #1b1b1a;
+  color: white;
+  height: 7%;
+  width: 5%; }
+  .btnForward .fas {
+    color: white;
+    font-size: x-large; }
+
+.couleurNav {
+  background-color: #1b1b1a;
+  opacity: 0.8; }
+
+.couleurAffichage {
+  background-color: #303030; }
+
+@media (max-width: 575.98px) and (orientation: portrait) {
+  h1 {
+    font-size: 2rem; }
+
+  .navigation {
+    height: 73px; }
+
+  .btnBack {
+    height: 71%;
+    left: 9%;
+    width: 9%; }
+
+  .btnForward {
+    height: 71%;
+    right: 12%;
+    width: 9%; }
+
+  .realpatch {
+    left: 53%;
+    font-size: 99%; } }
+@media (min-width: 576px) and (max-width: 767.98px) and (orientation: portrait) {
+  h1 {
+    font-size: 2rem; }
+
+  .navigation {
+    margin-left: 0rem; }
+
+  .btnForward {
+    right: 9%;
+    width: 10%; }
+
+  .btnBack {
+    left: 16%;
+    width: 10%; }
+
+  .realpatch {
+    left: 52%;
+    top: -34%;
+    font-size: 100%; }
+
+  .couleurNav {
+    background-color: #1b1b1a; }
+
+  .background {
+    background-image: url(../media/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 115%; } }
+@media (min-width: 576px) and (max-width: 767.98px) and (orientation: landscape) {
+  h1 {
+    font-size: 2.5rem; }
+
+  .btnBack {
+    left: 13%;
+    height: 7%;
+    width: 9%; }
+
+  .btnForward {
+    right: 9%;
+    height: 7%;
+    width: 9%; }
+
+  .realpatch {
+    left: 49%;
+    top: -33%;
+    font-size: 98%; }
+
+  .background {
+    width: 785px; } }
+@media (min-width: 768px) and (max-width: 991.98px) and (orientation: portrait) {
+  .btnForward {
+    right: 6%;
+    width: 8%; }
+
+  .btnBack {
+    right: -13%;
+    width: 8%; }
+
+  .realpatch {
+    left: 60%;
+    top: -63%;
+    font-size: 115%; }
+
+  .background {
+    background-image: url(../media/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 995px; } }
+@media (min-width: 768px) and (max-width: 991.98px) and (orientation: landscape) {
+  .background {
+    width: 932px; }
+
+  .btnForward {
+    right: 8%;
+    height: 6%;
+    width: 7%; }
+
+  .btnBack {
+    left: 11%;
+    height: 6%;
+    width: 7%; }
+
+  .realpatch {
+    left: 58%;
+    top: -31%;
+    font-size: 98%; } }
+@media (min-width: 992px) and (max-width: 1199.98px) and (orientation: portrait) {
+  .realpatch {
+    left: 64%;
+    top: -63%;
+    font-size: 124%; }
+
+  .btnBack {
+    position: relative;
+    left: 11%;
+    background-color: #1b1b1a;
+    color: white;
+    height: 6%;
+    width: 7%; }
+
+  .btnForward {
+    position: relative;
+    right: 6%;
+    background-color: #1b1b1a;
+    color: white;
+    height: 6%;
+    width: 7%; }
+
+  .background {
+    width: 121%;
+    background-size: 1199px; } }
 
 /*# sourceMappingURL=styles.css.map */

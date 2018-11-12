@@ -10,16 +10,11 @@ h1 {
 .background {
   background-image: url(../media/background.jpg);
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  width: 100%; }
 
 .navigation {
   background-color: #1b1b1a; }
-
-.ml-5 {
-  margin-left: 14rem !important; }
-
-.mr-5 {
-  margin-right: 10rem !important; }
 
 img {
   width: 70px; }
@@ -72,19 +67,21 @@ img {
   h1 {
     font-size: 2rem; }
 
+  .navigation {
+    height: 73px; }
+
   .btnBack {
-    height: 84%;
-    right: -13%;
-    width: 10%; }
+    height: 71%;
+    left: 9%;
+    width: 9%; }
 
   .btnForward {
-    height: 84%;
-    right: 9%;
-    width: 10%; }
+    height: 71%;
+    right: 12%;
+    width: 9%; }
 
   .realpatch {
     left: 53%;
-    top: -60%;
     font-size: 99%; } }
 @media (min-width: 576px) and (max-width: 767.98px) and (orientation: portrait) {
   h1 {
@@ -98,16 +95,43 @@ img {
     width: 10%; }
 
   .btnBack {
-    right: -15%;
+    left: 16%;
     width: 10%; }
 
   .realpatch {
     left: 52%;
-    top: -53%;
+    top: -34%;
     font-size: 100%; }
 
   .couleurNav {
-    background-color: #1b1b1a; } }
+    background-color: #1b1b1a; }
+
+  .background {
+    background-image: url(../media/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 115%; } }
+@media (min-width: 576px) and (max-width: 767.98px) and (orientation: landscape) {
+  h1 {
+    font-size: 2.5rem; }
+
+  .btnBack {
+    left: 13%;
+    height: 7%;
+    width: 9%; }
+
+  .btnForward {
+    right: 9%;
+    height: 7%;
+    width: 9%; }
+
+  .realpatch {
+    left: 49%;
+    top: -33%;
+    font-size: 98%; }
+
+  .background {
+    width: 785px; } }
 @media (min-width: 768px) and (max-width: 991.98px) and (orientation: portrait) {
   .btnForward {
     right: 6%;
@@ -120,11 +144,55 @@ img {
   .realpatch {
     left: 60%;
     top: -63%;
-    font-size: 115%; } }
+    font-size: 115%; }
+
+  .background {
+    background-image: url(../media/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 995px; } }
+@media (min-width: 768px) and (max-width: 991.98px) and (orientation: landscape) {
+  .background {
+    width: 932px; }
+
+  .btnForward {
+    right: 8%;
+    height: 6%;
+    width: 7%; }
+
+  .btnBack {
+    left: 11%;
+    height: 6%;
+    width: 7%; }
+
+  .realpatch {
+    left: 58%;
+    top: -31%;
+    font-size: 98%; } }
 @media (min-width: 992px) and (max-width: 1199.98px) and (orientation: portrait) {
   .realpatch {
     left: 64%;
     top: -63%;
-    font-size: 124%; } }
+    font-size: 124%; }
+
+  .btnBack {
+    position: relative;
+    left: 11%;
+    background-color: #1b1b1a;
+    color: white;
+    height: 6%;
+    width: 7%; }
+
+  .btnForward {
+    position: relative;
+    right: 6%;
+    background-color: #1b1b1a;
+    color: white;
+    height: 6%;
+    width: 7%; }
+
+  .background {
+    width: 121%;
+    background-size: 1199px; } }
 
 /*# sourceMappingURL=styles.css.map */

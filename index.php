@@ -1,11 +1,9 @@
-<link rel="stylesheet" href="css/style.css" href="css/styles.css">
 <?php
 require 'vendor/autoload.php';
 
 // Routing
 $page = 'index';
-$myArray = 'array';
-$myArray = ["path" => $path];
+
 
 if (isset($_GET['url'])) {
     $path  = realpath($_GET['url']);
@@ -21,8 +19,6 @@ $twig = new Twig_Environment($loader, [
 ]);
 
 
-echo json_encode($myArray);
-
 switch ($page) {
     case 'index':
 
@@ -32,21 +28,24 @@ switch ($page) {
        
         $realpath = realpath($dir);
 
-        $liste = array();
-       
+        $listeDossier = array();
+        $listeFichier = array();
 
         while (( $file = readdir( $dh)) !== false ){
            
-            if( is_dir( $file )  ){
+            if( is_dir( $file ) && $file != '.' && $file != '..' && $file != '.git' && $file != '.sass-cache'){
             
-                $liste[] = array("fichier" => $file, "isDir" => true, "extension" => "");
-            }else{
-                $liste[] = array("fichier" => $file, "isDir" => false, "extension" => pathinfo( $dir.$file,PATHINFO_EXTENSION));
+                $listeDossier[] = array("fichier" => $file, "isDir" => true, "extension" => "");
+            }else if ($file != '.' && $file != '..' && $file != '.git' && $file != '.sass-cache' && $file != '.gitignore' && $file != 'composer.json' && $file != 'composer.lock'){
+                $listeFichier[] = array("fichier" => $file, "isDir" => false, "extension" => pathinfo( $dir.$file,PATHINFO_EXTENSION));
             }
         }
         closedir( $dh );
+
+        sort($listeDossier);
+        sort($listeFichier);
         
-        echo $twig->render('affichageFichiers.twig', array ( 'dir' => $dir, 'liste' => $liste, 'realpath' => $realpath,   ));
+        echo $twig->render('affichageFichiers.twig', array ( 'dir' => $dir, 'listeDossier' => $listeDossier, 'listeFichier' => $listeFichier,'realpath' => $realpath,   ));
        
         break;
     default:

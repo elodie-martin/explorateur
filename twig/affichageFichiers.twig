@@ -2,21 +2,23 @@
 
 {% block affichageFichiers %} 
 
-    {% for affichageFichier in liste %}
-    
+    {% for affichageFichier in listeDossier %}
+
         {% if affichageFichier.isDir == true %}
-        <div id="chemin">
-            <a class="dir" onclick = "dossier_click()" href="{{affichageFichier.fichier}}" > <img class="image" src="media/{{affichageFichier.fichier}}folder.png"></a>
-        </div>
-         {% else %}
-   
+        <a href="?dossier={{affichageFichier.fichier}}" class="pl-2 pr-2"> <img width="70px" height="70px"  src="media/{{affichageFichier.fichier}}folder.png" ></a>
+        {% endif %}
 
-       <img class="image"  src="media/{{affichageFichier.extension}}.svg"> {{affichageFichier.fichier}}
+    {% endfor %}
 
-      
+    {% for affichageFichier in listeFichier %}
+
+        {% if affichageFichier.isDir == false %}
+            <a href="#" class="pl-2 pr-2"> <img width="70px" height="70px"  src="media/{{affichageFichier.extension}}.svg">
+            <br>{{affichageFichier.fichier}} </a>
         {% endif %}
 
     {% endfor %}
     
 {% endblock %}
+    
 

@@ -8,7 +8,7 @@
 {% endblock %}
 
 {% block header %} 
-<h1>Explorateur de fichiers</h1>
+<h1 class="text-center">Explorateur de fichiers</h1>
 {% endblock %}
 
 {% block realpatch %}
@@ -29,14 +29,20 @@
 
 
 {% block nav %}
-    {% for affichageFichier in liste %}
+    {% for affichageFichier in listeDossier %}
 
-        {% if affichageFichier.isDir == true %}
-            <br><a  href="{{affichageFichier.fichier}}"> <img width="70px" height="70px"  src="media/{{affichageFichier.fichier}}folder.png" ></a>
-        {% else %}
+    {% if affichageFichier.isDir == true %}
+        <div><a  onclick="dossier_click()" href="#"> <img width="70px" height="70px"  src="media/{{affichageFichier.fichier}}folder.png" ></a></div>
+    {% endif %}
 
-        <br><a href="{{affichageFichier.fichier}}"> <img width="70px" height="70px"  src="media/{{affichageFichier.extension}}.svg"> {{affichageFichier.fichier}}</a>
-        {% endif %}
+    {% endfor %}
+
+    {% for affichageFichier in listeFichier %}
+
+    {% if affichageFichier.isDir == false %}
+        <div class="d-flex flex-wrap"><div class="test"><a href="#"> <img width="70px" height="70px"  src="media/{{affichageFichier.extension}}.svg">
+        <br>{{affichageFichier.fichier}} </a></div></div>
+    {% endif %}
 
     {% endfor %}
 {% endblock %}

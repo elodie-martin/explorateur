@@ -1,6 +1,4 @@
 h1 {
-  display: flex;
-  justify-content: center;
   background-color: #1b1b1a;
   color: white;
   margin: 0;
@@ -27,7 +25,6 @@ h1 {
 
 .realpatch {
   position: relative;
-  left: 70%;
   top: -33%;
   font-size: 136%;
   color: white; }
@@ -60,6 +57,9 @@ h1 {
 
 .couleurAffichage {
   background-color: #303030; }
+  .couleurAffichage a {
+    color: #FFFFFF;
+    text-decoration: none; }
 
 @media (max-width: 575.98px) and (orientation: portrait) {
   h1 {
@@ -79,7 +79,6 @@ h1 {
     width: 8%; }
 
   .realpatch {
-    left: 53%;
     font-size: 99%; } }
 @media (max-width: 575.98px) and (orientation: landscape) {
   .btnBack {
@@ -107,18 +106,11 @@ h1 {
     width: 10%; }
 
   .realpatch {
-    left: 52%;
     top: -34%;
     font-size: 100%; }
 
   .couleurNav {
-    background-color: #1b1b1a; }
-
-  .background {
-    background-image: url(../media/background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 115%; } }
+    background-color: #1b1b1a; } }
 @media (min-width: 576px) and (max-width: 767.98px) and (orientation: landscape) {
   h1 {
     font-size: 2.5rem; }
@@ -134,12 +126,8 @@ h1 {
     width: 9%; }
 
   .realpatch {
-    left: 49%;
     top: -33%;
-    font-size: 98%; }
-
-  .background {
-    width: 785px; } }
+    font-size: 98%; } }
 @media (min-width: 768px) and (max-width: 991.98px) and (orientation: portrait) {
   .btnForward {
     right: 6%;
@@ -150,19 +138,9 @@ h1 {
     width: 8%; }
 
   .realpatch {
-    left: 60%;
     top: -63%;
-    font-size: 115%; }
-
-  .background {
-    background-image: url(../media/background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 995px; } }
+    font-size: 115%; } }
 @media (min-width: 768px) and (max-width: 991.98px) and (orientation: landscape) {
-  .background {
-    width: 932px; }
-
   .btnForward {
     right: 8%;
     height: 6%;
@@ -174,12 +152,10 @@ h1 {
     width: 7%; }
 
   .realpatch {
-    left: 58%;
     top: -31%;
     font-size: 98%; } }
 @media (min-width: 992px) and (max-width: 1199.98px) and (orientation: portrait) {
   .realpatch {
-    left: 64%;
     top: -63%;
     font-size: 124%; }
 
@@ -197,10 +173,6 @@ h1 {
     background-color: #1b1b1a;
     color: white;
     height: 6%;
-    width: 7%; }
-
-  .background {
-    width: 121%;
-    background-size: 1199px; } }
+    width: 7%; } }
 
 /*# sourceMappingURL=styles.css.map */

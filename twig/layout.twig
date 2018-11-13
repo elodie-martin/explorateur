@@ -29,7 +29,7 @@
                 <div class="navigation col-12 col-sm-12 col-md-12 col-lg-12">
                     {% block bouton %} {% endblock %}
 
-                    <div class="realpatch ">
+                    <div class="realpatch d-flex justify-content-end">
                         {% block realpatch %}{% endblock %}
                     </div>
                 </div>
@@ -45,8 +45,8 @@
                        {# ARBRE #}
                         {% block nav %} {% endblock %}
                     </div>
-                    <div class="couleurAffichage col-8 col-sm-8 col-md-8 col-lg-8">
-                            {# AFFICHAGE DOSSIER #}
+                    <div class="petit couleurAffichage col-8 col-sm-8 col-md-8 col-lg-8 d-flex align-content-start flex-wrap justify-content-center">
+                            
                             {% block affichageFichiers %} {% endblock %}
                         </div>
                 

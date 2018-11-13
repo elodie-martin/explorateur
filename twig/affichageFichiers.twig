@@ -6,12 +6,12 @@
     
         {% if affichageFichier.isDir == true %}
         <div id="chemin">
-            <a class="dir" onclick = "dossier_click()" href="{{affichageFichier.fichier}}" > <img class="image" width="70px" height="70px" src="media/{{affichageFichier.fichier}}folder.png"></a>
+            <a class="dir" onclick = "dossier_click()" href="{{affichageFichier.fichier}}" > <img class="image" src="media/{{affichageFichier.fichier}}folder.png"></a>
         </div>
          {% else %}
    
 
-       <img width="70px" height="70px" src="media/{{affichageFichier.extension}}.svg"> {{affichageFichier.fichier}}
+       <img class="image"  src="media/{{affichageFichier.extension}}.svg"> {{affichageFichier.fichier}}
 
       
         {% endif %}

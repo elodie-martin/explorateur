@@ -16,8 +16,9 @@ h1 {
 .navigation {
   background-color: #1b1b1a; }
 
-img {
-  width: 70px; }
+.image {
+  width: 70px;
+  height: 70px; }
 
 .content .petit .imgFichier {
   width: 55px !important; }
@@ -68,18 +69,28 @@ img {
     height: 73px; }
 
   .btnBack {
-    height: 71%;
+    height: 60%;
     left: 9%;
-    width: 9%; }
+    width: 8%; }
 
   .btnForward {
-    height: 71%;
-    right: 12%;
-    width: 9%; }
+    height: 60%;
+    right: 10%;
+    width: 8%; }
 
   .realpatch {
     left: 53%;
     font-size: 99%; } }
+@media (max-width: 575.98px) and (orientation: landscape) {
+  .btnBack {
+    height: 60%;
+    left: 9%;
+    width: 8%; }
+
+  .btnForward {
+    height: 60%;
+    right: 10%;
+    width: 8%; } }
 @media (min-width: 576px) and (max-width: 767.98px) and (orientation: portrait) {
   h1 {
     font-size: 2rem; }

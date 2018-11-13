@@ -87,7 +87,10 @@ h1 {
 .couleurNav {
     background-color: rgb(27, 27, 26);
     opacity: 0.8;
-
+    a {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
 }
 
 .couleurAffichage {

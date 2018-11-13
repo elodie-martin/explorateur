@@ -31,18 +31,18 @@
 {% block nav %}
     {% for affichageFichier in listeDossier %}
 
-    {% if affichageFichier.isDir == true %}
-        <div><a  onclick="dossier_click()" href="#"> <img width="70px" height="70px"  src="media/{{affichageFichier.fichier}}folder.png" ></a></div>
-    {% endif %}
+        {% if affichageFichier.isDir == true %}
+        <a href="?dossier={{affichageFichier.fichier}}" class="pl-2 pr-2"> <img width="70px" height="70px"  src="media/{{affichageFichier.fichier}}folder.png" ></a>
+        {% endif %}
 
     {% endfor %}
 
     {% for affichageFichier in listeFichier %}
 
-    {% if affichageFichier.isDir == false %}
-        <div class="d-flex flex-wrap"><div class="test"><a href="#"> <img width="70px" height="70px"  src="media/{{affichageFichier.extension}}.svg">
-        <br>{{affichageFichier.fichier}} </a></div></div>
-    {% endif %}
+        {% if affichageFichier.isDir == false %}
+            <a href="#" class="pl-2 pr-2"> <img width="70px" height="70px"  src="media/{{affichageFichier.extension}}.svg">
+            <br>{{affichageFichier.fichier}} </a>
+        {% endif %}
 
     {% endfor %}
 {% endblock %}

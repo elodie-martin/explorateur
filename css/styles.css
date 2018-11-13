@@ -55,6 +55,9 @@ h1 {
 .couleurNav {
   background-color: #1b1b1a;
   opacity: 0.8; }
+  .couleurNav a {
+    color: #FFFFFF;
+    text-decoration: none; }
 
 .couleurAffichage {
   background-color: #303030; }

@@ -5,11 +5,6 @@ require 'vendor/autoload.php';
 $page = 'index';
 
 
-if (isset($_GET['url'])) {
-    $path  = realpath($_GET['url']);
-}
-
-
 
 // Rendu du template
 $loader = new Twig_Loader_Filesystem('twig');
@@ -29,7 +24,7 @@ switch ($page) {
         $realpath = realpath($dir);
 
         $listeDossier = array();
-        $listeFichier = array();
+        $listeFichier = array(); 
 
         while (( $file = readdir( $dh)) !== false ){
            

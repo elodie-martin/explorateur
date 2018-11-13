@@ -20,8 +20,8 @@
 
 {% block bouton %}
 
-<button class="btnBack" onclick="history.go(1);"><i class="fas fa-chevron-circle-left"></i></button>
-<button class="btnBack" onclick="history.go(-1);"><i class="fas fa-chevron-circle-right"></i></button>
+<button class="btnBack" onclick="history.go(-1);"><i class="fas fa-chevron-circle-left"></i></button>
+<button class="btnBack" onclick="history.go(1);"><i class="fas fa-chevron-circle-right"></i></button>
 
 
 {% endblock %}
@@ -32,7 +32,7 @@
     {% for affichageFichier in listeDossier %}
 
         {% if affichageFichier.isDir == true %}
-        <a href="?dossier={{affichageFichier.fichier}}" class="pl-2 pr-2"> <img width="70px" height="70px"  src="media/{{affichageFichier.fichier}}folder.png" ></a>
+            <a href="?dossier={{affichageFichier.fichier}}" class="pl-2 pr-2"> <img width="70px" height="70px"  src="media/{{affichageFichier.fichier}}folder.png" ></a>
         {% endif %}
 
     {% endfor %}

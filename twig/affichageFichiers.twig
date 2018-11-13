@@ -5,7 +5,7 @@
     {% for affichageFichier in listeDossier %}
 
         {% if affichageFichier.isDir == true %}
-        <a  onclick="dossier_click()" href="#" class="pl-2 pr-2"> <img width="70px" height="70px"  src="media/{{affichageFichier.fichier}}folder.png" ></a>
+        <a href="?dossier={{affichageFichier.fichier}}" class="pl-2 pr-2"> <img width="70px" height="70px"  src="media/{{affichageFichier.fichier}}folder.png" ></a>
         {% endif %}
 
     {% endfor %}

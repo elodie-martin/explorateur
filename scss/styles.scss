@@ -1,7 +1,5 @@
 
 h1 {
-    display: flex;
-    justify-content: center;
     background-color: rgb(27, 27, 26);
     color: white;
     margin: 0;
@@ -47,7 +45,6 @@ img {
 
 .realpatch {
     position: relative;
-    left: 70%;
     top: -33%;
     font-size: 136%;
     color: white;
@@ -125,8 +122,6 @@ img {
         width: 9%;
     }
     .realpatch {
-       
-        left: 53%;
         font-size: 99%;
         
     }
@@ -155,8 +150,6 @@ img {
     }
 
     .realpatch {
-
-        left: 52%;
         top: -34%;
         font-size: 100%;
 
@@ -164,13 +157,6 @@ img {
 
     .couleurNav {
         background-color: rgb(27, 27, 26);
-    }
-    .background {
-        background-image: url(../media/background.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 115%;
-    
     }
 }
 
@@ -194,17 +180,10 @@ h1{
     width: 9%;
 }
 .realpatch {
-    left: 49%;
     top: -33%;
     font-size: 98%;
     
 }
-
-
-.background {
-   width: 785px;
-}
-
 
 }
 
@@ -222,28 +201,15 @@ h1{
     }
 
     .realpatch {
-        left: 60%;
         top: -63%;
         font-size: 115%;
 
 
     
 }
-.background {
-    background-image: url(../media/background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 995px;
-
-
-}
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) and (orientation:landscape) {
-
-    .background {
-        width: 932px;
-    }
         .btnForward {
             right: 8%;
             height: 6%;
@@ -257,7 +223,6 @@ h1{
         }
 
         .realpatch {
-            left: 58%;
             top: -31%;
             font-size: 98%;
         }
@@ -266,7 +231,6 @@ h1{
         // MEDIA PORTRAIT MIN 992PX AND MAX 1199.98PX 
 @media (min-width: 992px) and (max-width: 1199.98px) and (orientation:portrait) {
     .realpatch {
-        left: 64%;
         top: -63%;
         font-size: 124%;
 
@@ -287,9 +251,5 @@ h1{
         color: white;
         height: 6%;
         width: 7%;
-    }
-    .background {
-       width: 121%;
-        background-size: 1199px;
     }
 }

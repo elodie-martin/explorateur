@@ -15,54 +15,45 @@
 </head>
 
 <body class="background">
-
-    <section class="container-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="navigation col-12 col-sm-12 col-md-12 col-lg-12">
-                    {# TITRE #}
-                    {% block header %} {% endblock %}
-                </div>
-            </div>
-            {# NAVIGATION #}
-            <div class="row">
-                <div class="navigation col-12 col-sm-12 col-md-12 col-lg-12">
-                    {% block bouton %} {% endblock %}
-
-                    <div class="realpatch d-flex justify-content-end">
-                        {% block realpatch %}{% endblock %}
+    <section class="d-flex col-justify-content-start align-items-sm-center align-items-md-center align-items-lg-center align-items-xl-center h-100">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="navigation col-12 col-sm-12 col-md-12 col-lg-12">
+                        {# TITRE #}
+                        {% block header %} {% endblock %}
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="container-fluid">
-        <div class="container">
-            <div class="row">
-                
-                    <div class="couleurNav  col-4 col-sm-4 col-md-4 col-lg-4">
-                       {# ARBRE #}
-                        {% block nav %} {% endblock %}
-                    </div>
-                    <div class="petit couleurAffichage col-8 col-sm-8 col-md-8 col-lg-8 d-flex align-content-start flex-wrap justify-content-center">
-                         
-                        {% block affichageFichiers %} {% endblock %}
+                {# NAVIGATION #}
+                <div class="row navigation">
+                    <div class="col-12 col-sm-3 col-md-3 col-lg-3">
+                        <div class="d-flex justify-content-center justify-content-sm-start justify-content-md-start  justify-content-lg-start  justify-content-xl-start">
+                            {% block bouton %} {% endblock %}
+                                
                         </div>
-                
-            </div>
-        </div>
-    </section>
-    <section class="container-fluid col-12 col-sm-12 col-md-12 col-lg-12">
-        <div class="container">
-            <div class="row">
-                <div class="petit">
-                        
-                        
-
+                    </div>
+                    <div class="col-12 col-sm-9 col-md-9 col-lg-9 d-flex align-items-center justify-content-center justify-content-sm-end  justify-content-md-end  justify-content-lg-end  justify-content-xl-end">
+                        <div class="realpatch">
+                            {% block realpatch %}{% endblock %}
+                        </div>
+                    </div>
                     
-                  
+                </div>
+            </div>
 
+
+            <div class="container">
+                <div class="row row-affichage">
+                    
+                        <div class="couleurNav  col-4 col-sm-4 col-md-4 col-lg-4 d-flex align-content-start flex-wrap justify-content-center    ">
+                        {# ARBRE #}
+                            {% block nav %} {% endblock %}
+                        </div>
+                        <div class="petit couleurAffichage col-8 col-sm-8 col-md-8 col-lg-8 d-flex align-content-start flex-wrap justify-content-center">
+                                
+                                {% block affichageFichiers %} {% endblock %}
+                            </div>
+                    
                 </div>
             </div>
         </div>
